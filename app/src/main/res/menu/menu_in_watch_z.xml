@@ -3,4 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".InWatchZ">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:id="@+id/help"
+        android:icon="@mipmap/phone"
+        android:title="@string/emergency"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/more_help"
+        android:icon="@mipmap/camera"
+        android:title="@string/camera"
+        app:showAsAction="always"/>
 </menu>

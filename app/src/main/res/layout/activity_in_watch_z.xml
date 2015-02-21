@@ -1,44 +1,52 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#000000"
+    android:textColor="#ffffff"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Next:"
+        android:text="@string/next"
         android:id="@+id/textView"
         android:textColor="#ffffff"
-        android:layout_marginTop="27dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="0dp"
+        android:gravity="center"/>
+
+    <ListView android:id="@+id/listView"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:gravity="center"/>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/history"
+        android:id="@+id/textView2"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"/> !-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="History"
+        android:text="@string/history"
         android:id="@+id/textView2"
-        android:layout_marginBottom="25dp"
         android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_gravity="center" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/textView2" />
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView2"
-        android:layout_alignTop="@+id/listView"
-        android:layout_centerHorizontal="true" />
+    <ListView android:id="@+id/listView2"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:gravity="center"/>
 
-</RelativeLayout>
+</LinearLayout>
