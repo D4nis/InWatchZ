@@ -1,5 +1,49 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:id="@+id/">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Next:"
+        android:id="@+id/textView"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="History"
+        android:id="@+id/textView2"
+        android:layout_marginBottom="25dp"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:text="IBUPROFEN"
+        android:id="@+id/button"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="false"
+        android:enabled="true"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:text="OMEPRAZOLE"
+        android:id="@+id/button2"
+        android:layout_above="@+id/textView2"
+        android:layout_alignStart="@+id/button"
+        />
+
 </RelativeLayout>
