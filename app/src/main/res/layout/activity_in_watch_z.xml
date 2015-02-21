@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:id="@+id/">
+    android:background="#000000">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,7 +11,8 @@
         android:text="Next:"
         android:id="@+id/textView"
         android:textColor="#ffffff"
-        android:layout_above="@+id/button"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -26,24 +26,19 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="200px"
+    <ListView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="IBUPROFEN"
-        android:id="@+id/button"
-        android:layout_above="@+id/button2"
+        android:id="@+id/listView"
+        android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentStart="false"
-        android:enabled="true"
-        android:padding="10dp" />
+        android:layout_above="@+id/textView2" />
 
-    <Button
-        android:layout_width="200px"
+    <ListView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OMEPRAZOLE"
-        android:id="@+id/button2"
-        android:layout_above="@+id/textView2"
-        android:layout_alignStart="@+id/button"
-        />
+        android:id="@+id/listView2"
+        android:layout_alignTop="@+id/listView"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
