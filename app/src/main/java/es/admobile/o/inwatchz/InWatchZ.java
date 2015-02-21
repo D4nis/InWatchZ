@@ -39,10 +39,10 @@ public class InWatchZ extends ActionBarActivity {
 
         ArrayList<String> past_names = new ArrayList<String>();
         past_names.clear();
-        past_names.add(0, "IBUPROFEN");
+        past_names.add(0, "OMEPRAZOLE");
         past_names.add(1, "VITAMIN C");
-        past_names.add(2, "EBASTINE");
-        past_names.add(3, "ESOMEPRAZOLE");
+        past_names.add(2, "CHOLESTEROL LOWERING");
+        past_names.add(3, "ORAL ASTHMA");
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.mytextview, past_names);
         ListView past_lv = (ListView) findViewById(R.id.listView2);
         past_lv.setAdapter(adapter2);
