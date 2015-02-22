@@ -71,7 +71,7 @@ public class InWatchZ extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_in_watch_z, menu);
+//        getMenuInflater().inflate(R.menu.menu_in_watch_z, menu);
         return true;
     }
 
@@ -106,10 +106,12 @@ public class InWatchZ extends ActionBarActivity {
     }
 
     private void setupActionBar() {
-        ActionBar ab = getSupportActionBar();
-//        ab.setTitle("HOLA");
-//        Log.e("TEST", ab.toString());
-        ab.setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.abs_layout);
+//        ActionBar ab = getSupportActionBar();
+////        ab.setTitle("HOLA");
+////        Log.e("TEST", ab.toString());
+//        ab.setDisplayShowTitleEnabled(false);
         /*
         ab.setIcon(R.mipmap.ic_launcher);
 
