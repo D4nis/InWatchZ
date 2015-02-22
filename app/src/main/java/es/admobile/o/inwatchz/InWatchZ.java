@@ -86,7 +86,7 @@ public class InWatchZ extends ActionBarActivity {
                 emergencyCall();
                 return true;
             case R.id.camera:
-//                showHelp();
+                takePhoto();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -96,6 +96,12 @@ public class InWatchZ extends ActionBarActivity {
     private void emergencyCall()
     {
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 934101024));
+        startActivity(intent);
+    }
+
+    private void takePhoto()
+    {
+        Intent intent = new Intent(this, CreateReminder.class);
         startActivity(intent);
     }
 

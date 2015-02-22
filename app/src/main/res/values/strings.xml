@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">iRemember</string>
     <string name="title">iR</string>
     <string name="action_settings">Settings</string>
@@ -6,4 +8,5 @@
     <string name="history">Past</string>
     <string name="emergency">Emergency Call</string>
     <string name="camera">Camera</string>
+
 </resources>
