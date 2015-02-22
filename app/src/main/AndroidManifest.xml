@@ -18,8 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateReminder1" >
+        </activity>
         <activity
-            android:name=".CreateReminder1" >
+            android:name=".CreateReminder2"
+            android:label="@string/title_activity_create_reminder2" >
         </activity>
     </application>
 

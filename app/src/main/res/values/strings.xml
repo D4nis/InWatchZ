@@ -8,5 +8,7 @@
     <string name="history">Past</string>
     <string name="emergency">Emergency Call</string>
     <string name="camera">Camera</string>
+    <string name="title_activity_create_reminder2">CreateReminder2</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

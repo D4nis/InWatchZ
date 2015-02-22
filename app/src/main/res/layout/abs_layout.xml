@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:orientation="horizontal"
-    >
+    android:orientation="horizontal">
 
     <ImageButton
         android:id="@+id/emergency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/phone"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="emergencyCall" />
 
     <ImageButton
         android:id="@+id/camera"
@@ -20,15 +20,15 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/camera"
         android:layout_centerVertical="true"
-        android:layout_centerInParent="true"  />
+        android:layout_centerInParent="true"
+        android:onClick="takePhoto" />
 
-    <!--
     <ImageButton
-        android:id="@+id/action_settings"
+        android:id="@+id/config"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/settings"
-        android:layout_alignParentEnd="true" />-->
-
+        android:src="@mipmap/config"
+        android:layout_alignParentEnd="true"
+        android:onClick="setConfig" />
 
 </RelativeLayout>

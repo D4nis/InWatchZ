@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,10 +29,12 @@ public class InWatchZ extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_watch_z);
-//        setTitle("iR");
+
         setupActionBar();
+
         ArrayList<String> names = new ArrayList<String>();
         names.clear();
+
         names.add(0, "IBUPROFEN");
         names.add(1, "VITAMIN C");
         names.add(2, "EBASTINE");
@@ -65,8 +68,36 @@ public class InWatchZ extends ActionBarActivity {
                 Toast.makeText(getBaseContext(), "Click", Toast.LENGTH_LONG).show();
             }
         });
+
+        final ImageButton emergencyCall = (ImageButton) findViewById(R.id.emergency);
+        emergencyCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                emergencyCall();
+            }
+        });
+
+        final ImageButton takePhoto = (ImageButton) findViewById(R.id.camera);
+        takePhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                takePhoto();
+            }
+        });
+
     }
 
+    private void emergencyCall()
+    {
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 934101024));
+        startActivity(intent);
+    }
+
+    private void takePhoto()
+    {
+        Intent intent = new Intent(this, CreateReminder1.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,20 +124,7 @@ public class InWatchZ extends ActionBarActivity {
         }
     }
 
-    private void emergencyCall()
-    {
-        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 934101024));
-        startActivity(intent);
-    }
-
-    private void takePhoto()
-    {
-        Intent intent = new Intent(this, CreateReminder1.class);
-        startActivity(intent);
-    }
-
     private void setupActionBar() {
-
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.abs_layout);
         //ActionBar ab = getSupportActionBar();
