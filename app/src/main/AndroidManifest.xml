@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateReminder" >
+            android:name=".CreateReminder1" >
         </activity>
     </application>
 
