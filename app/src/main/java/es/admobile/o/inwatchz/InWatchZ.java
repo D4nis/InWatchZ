@@ -1,14 +1,23 @@
 package es.admobile.o.inwatchz;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
@@ -19,6 +28,8 @@ public class InWatchZ extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_watch_z);
+//        setTitle("iR");
+        setupActionBar();
         ArrayList<String> names = new ArrayList<String>();
         names.clear();
         names.add(0, "IBUPROFEN");
@@ -70,13 +81,45 @@ public class InWatchZ extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.emergency:
+                emergencyCall();
+                return true;
+            case R.id.camera:
+//                showHelp();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
+    }
 
-        return super.onOptionsItemSelected(item);
+    private void emergencyCall()
+    {
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + 934101024));
+        startActivity(intent);
+    }
+
+    private void setupActionBar() {
+        ActionBar ab = getSupportActionBar();
+//        ab.setTitle("HOLA");
+//        Log.e("TEST", ab.toString());
+        ab.setDisplayShowTitleEnabled(false);
+        /*
+        ab.setIcon(R.mipmap.ic_launcher);
+
+        LayoutInflater inflator = (LayoutInflater) this
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View v = inflator.inflate(R.layout.activity_in_watch_z, null);
+
+        TextView titleTV = new TextView.appp("HOLA");
+        Typeface font = Typeface.createFromAsset(getAssets(),
+                "fonts/your_custom_font.ttf");
+        titleTV.setTypeface(font);
+
+        ab.setCustomView(v);
+
+        ab.setHomeButtonEnabled(true);
+        */
     }
 }

@@ -5,12 +5,12 @@
         android:orderInCategory="100" app:showAsAction="never" />
 
     <item
-        android:id="@+id/help"
+        android:id="@+id/emergency"
         android:icon="@mipmap/phone"
         android:title="@string/emergency"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/more_help"
+        android:id="@+id/camera"
         android:icon="@mipmap/camera"
         android:title="@string/camera"
         app:showAsAction="always"/>
